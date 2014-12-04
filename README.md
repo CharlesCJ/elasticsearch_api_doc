@@ -350,7 +350,7 @@ queryByI
 | :-------: |:--------:|:--------:     |
 | status    | int      | 参考：200      |
 | message   | String   | 消息:"Success" |
-| data      | String   | List\<JSON.toString()>|
+| data      | String   | List\<JSON>.toString()|
 
 
 #### 12.根据index和type查找符合jsonStr的数据
@@ -370,9 +370,9 @@ queryByIT
 | :-------: |:--------:|:--------:     |
 | status    | int      | 参考：200      |
 | message   | String   | 消息:"Success" |
-| data      | String   | List\<JSON.toString()>|
+| data      | String   | List\<JSON>.toString()|
 
-#### 13.根据index查找符合jsonStr的数据，并指定从from开始，数量为size
+#### 13.根据index查找符合jsonStr的数据，并指定PageBean分页信息
 
 >##### 1.url
 queryByIFS
@@ -381,8 +381,7 @@ queryByIFS
 | Name      |   Type   |   Mark         |
 | :-------: |:--------:|:--------:      |
 | indexName | String   |  索引名字        |
-| from      | int      |  起始位置        |
-| size      | int      |  搜索量          |
+| pageBean  | String   |PageBean.toString() |
 | jsonStr   | String   |List\<DataFormats>.toString()|
 >##### 3.返回
 >
@@ -390,10 +389,10 @@ queryByIFS
 | :-------: |:--------:|:--------:     |
 | status    | int      | 参考：200      |
 | message   | String   | 消息:"Success" |
-| data      | String   | List\<JSON.toString()>|
+| data      | String   | PageBean.toString()|
 
 
-#### 14.根据index和type查找符合jsonStr的数据，并指定从from开始，数量为size
+#### 14.根据index和type查找符合jsonStr的数据，并指定PageBean分页信息
 
 >##### 1.url
 queryByITFS
@@ -403,8 +402,7 @@ queryByITFS
 | :-------: |:--------:|:--------:      |
 | indexName | String   |  索引名字        |
 | type      | String   |  索引类型        |
-| from      | int      |  起始位置        |
-| size      | int      |  搜索量          |
+| pageBean  | String   |PageBean.toString() |
 | jsonStr   | String   |List\<DataFormats>.toString()|
 >##### 3.返回
 >
@@ -412,7 +410,7 @@ queryByITFS
 | :-------: |:--------:|:--------:     |
 | status    | int      | 参考：200      |
 | message   | String   | 消息:"Success" |
-| data      | String   | List\<JSON.toString()>|
+| data      | String   | PageBean.toString()|
 
 
 #### 15.根据index查找符合jsonStr的数据的ID
@@ -472,5 +470,4 @@ update
 | :-------: |:--------:|:--------:     |
 | status    | int      | 参考：200      |
 | message   | String   | 消息:"Success" |
-
 
