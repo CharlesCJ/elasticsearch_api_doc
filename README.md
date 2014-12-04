@@ -71,8 +71,17 @@
 
 ---
 
+#### InsertDataFormats
+>  index或update的数据结构实体类
+>
+| Name         | Type     |   Resume                       |
+| :-------:    |:-------- |:--------                       |
+| field        |String    | field的name                    |
+| fieldValue   |Object    | field的value                   |
 
->##### 1. DataFormats.Greater
+---
+
+>##### 1. QueryDataFormats.Greater
 > 指定关系为大于或大于等于  
 >
 | Name      |   Resume  |
@@ -80,7 +89,7 @@
 | gt        | 大于       |
 | gte       | 大于等于    |
 
->##### 2. DataFormats.Lesser
+>##### 2. QueryDataFormats.Lesser
 >指定关系为小于或小于等于
 >
 | Name      |   Resume  |
@@ -88,7 +97,7 @@
 | lt        | 小于       |
 | lte       | 小于等于    |
 
->##### 3. DataFormats.Relastions
+>##### 3. QueryDataFormats.Relastions
 > 指定greater和lesser关系为and或or
 >
 | Name      |   Resume  |
@@ -96,8 +105,8 @@
 | AND       | 与        |
 | OR        | 或        |
 
-#### DataFormats
->  CRUD的数据结构实体类
+#### QueryDataFormats
+>  query或delete的数据结构实体类
 >
 | Name         | Type     |   Resume                       |
 | :-------:    |:-------- |:--------                       |
@@ -211,7 +220,7 @@ index
 | :-------:     |:--------:|:--------:      |
 | indexName     | String   |  索引名字       |
 | type          | String   |  索引类型       |
-|dataFormatsStr | String   | List\<DataFormats>.toString()|
+|dataFormatsStr | String   | List\<InsertDataFormats>.toString()|
 
 >##### 3.返回
 >
@@ -227,11 +236,11 @@ index
 bulkIndex
 >##### 2.描述
 >
-| Name          |   Type   |   Mark         |
-| :-------:     |:--------:|:--------:      |
-| indexName     | String   |  索引名字       |
-| type          | String   |  索引类型       |
-|dataFormatsStr | String   | List\<List\<DataFormats>>.toString()|
+| Name          |   Type  |   Mark         |
+| :-------:     |:-------:|:--------:      |
+| indexName     | String  |  索引名字       |
+| type          | String  |  索引类型       |
+|dataFormatsStr | String  | List\<List\<InsertDataFormats>>.toString()|
 
 >##### 3.返回
 >
@@ -306,7 +315,7 @@ deleteByQuery
 | :-------:     |:--------:|:--------:      |
 | indexName     | String   |  索引名字       |
 | type          | String   |  索引类型       |
-| jsonStr       | String   |List\<DataFormats>.toString()|
+| jsonStr       | String   |List\<QueryDataFormats>.toString()|
 >##### 3.返回
 >
 | Name      |   Type   |   Mark        |
@@ -343,7 +352,7 @@ queryByI
 | Name      |   Type   |   Mark         |
 | :-------: |:--------:|:--------:      |
 | indexName | String   |  索引名字        |
-| jsonStr   | String   |List\<DataFormats>.toString()|
+| jsonStr   | String   |List\<QueryDataFormats>.toString()|
 >##### 3.返回
 >
 | Name      |   Type   |   Mark        |
@@ -363,7 +372,7 @@ queryByIT
 | :-------: |:--------:|:--------:      |
 | indexName | String   |  索引名字        |
 | type      | String   |  索引类型        |
-| jsonStr   | String   |List\<DataFormats>.toString()|
+| jsonStr   | String   |List\<QueryDataFormats>.toString()|
 >##### 3.返回
 >
 | Name      |   Type   |   Mark        |
@@ -382,7 +391,7 @@ queryByIFS
 | :-------: |:--------:|:--------:      |
 | indexName | String   |  索引名字        |
 | pageBean  | String   |PageBean.toString() |
-| jsonStr   | String   |List\<DataFormats>.toString()|
+| jsonStr   | String   |List\<QueryDataFormats>.toString()|
 >##### 3.返回
 >
 | Name      |   Type   |   Mark        |
@@ -403,7 +412,7 @@ queryByITFS
 | indexName | String   |  索引名字        |
 | type      | String   |  索引类型        |
 | pageBean  | String   |PageBean.toString() |
-| jsonStr   | String   |List\<DataFormats>.toString()|
+| jsonStr   | String   |List\<QueryDataFormats>.toString()|
 >##### 3.返回
 >
 | Name      |   Type   |   Mark        |
@@ -422,7 +431,7 @@ queryByIForIds
 | Name      |   Type   |   Mark         |
 | :-------: |:--------:|:--------:      |
 | indexName | String   |   索引名字       |
-| jsonStr   | String   |List\<DataFormats>.toString()|
+| jsonStr   | String   |List\<QueryDataFormats>.toString()|
 >##### 3.返回
 >
 | Name      |   Type   |   Mark        |
@@ -442,7 +451,7 @@ queryByITForIds
 | :-------: |:--------:|:--------:      |
 | indexName | String   |   索引名字       |
 | type      | String   |   索引类型       |
-| jsonStr   | String   |List\<DataFormats>.toString()|
+| jsonStr   | String   |List\<QueryDataFormats>.toString()|
 >##### 3.返回
 >
 | Name      |   Type   |   Mark        |
@@ -463,7 +472,7 @@ update
 | indexName | String   |   索引名字       |
 | type      | String   |   索引类型       |
 | id        | String   |   索引id        |
-| jsonStr   | String   |List\<DataFormats>.toString()|
+| jsonStr   | String   |List\<InsertDataFormats>.toString()|
 >##### 3.返回
 >
 | Name      |   Type   |   Mark        |
