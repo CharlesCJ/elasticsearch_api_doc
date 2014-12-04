@@ -240,7 +240,7 @@ bulkIndex
 | :-------:     |:-------:|:--------:      |
 | indexName     | String  |  索引名字       |
 | type          | String  |  索引类型       |
-|dataFormatsStr | String  | List\<List\<InsertDataFormats>>.toString()|
+|jsonStr | String  | List\<List\<InsertDataFormats>>.toString()|
 
 >##### 3.返回
 >
