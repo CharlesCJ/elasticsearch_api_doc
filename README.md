@@ -20,7 +20,6 @@
 | Boolean   | 布尔       | true/false |
 | Object    | object    | 对象|
 | Auto      | auto      |自动根据插入的值判断类型|
-| Nested    | 嵌套       | Array,List,Map ,etc.|
 | Ip        | ip        |"192.168.1.125" |
 | geo_point | 经纬度     |"32.009,120.890" 由纬度和经度用逗号分隔组成的字符串|
 
@@ -57,7 +56,7 @@
 | ik        | 使用ik分词插件 |
 
 
-#### MappingType
+#### MappingTypes
 >  createMapping或getMapping时的实体类  
 >
 | Name         |  type                |   Resume     |
@@ -68,6 +67,7 @@
 | store        |BaseCoreStores        | 是否存储      | 
 | format       |BaseCoreDateFormats   | 日期时间类型   | 
 | indexAnalyzer|BaseCoreIndexAnalyzers| 分词插件      |  
+| nestedMappingTypes|List<MappingTypes>|有nested类型时使用|
 
 ---
 
@@ -240,7 +240,7 @@ bulkIndex
 | :-------:     |:-------:|:--------:      |
 | indexName     | String  |  索引名字       |
 | type          | String  |  索引类型       |
-|jsonStr | String  | List\<List\<InsertDataFormats>>.toString()|
+|jsonStr    | String  | List\<List\<InsertDataFormats>>.toString()|
 
 >##### 3.返回
 >
