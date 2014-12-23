@@ -113,6 +113,13 @@
 | AND       | 与        |
 | OR        | 或        |
 
+>##### 4. QueryDataFormats.SortOrder
+> ASC,DESC
+>
+| Name      |   Resume  |
+| :-------: |:--------  |
+| ASC       | 升序       |
+| DESC      | 降序        |
 
 #### QueryDataFormats
 >  query或delete的数据结构实体类
@@ -127,6 +134,7 @@
 | lValue       |Object    | 小于或小于等于的值                |
 | rangeRelation|RangeRelation| 范围数据的左右区间关系为and或or |
 | dataRelation |DataRelation| 单条数据中的关系为and或or |
+|sort	       |  SortOrder |按字段指定排序方式		|
 | lat          |Object    | 纬度值                          |
 | lon          |Object    | 经度值                          |  
 | from         |String    | 从point标点指定开始范围，如"0km"   | 
